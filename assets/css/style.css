@@ -1,0 +1,76 @@
+html {
+    background-image: url(../images/wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    background: none;
+}
+
+p {
+    text-shadow: 
+    -1px -1px 0 yellow,
+	1px -1px 0 yellow,
+	-1px 1px 0 yellow,
+    1px 1px 0 yellow;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#yodabox,
+#yodabox1,
+#yodabox2,
+#yodabox3{
+    border: 5px solid #66F16F;
+    float: left;
+}
+
+#skywalkerbox,
+#skywalkerbox1,
+#skywalkerbox2,
+#skywalkerbox3{
+    border: 5px solid #04DDF6;
+    float: left;
+}
+
+#generalbox,
+#generalbox1,
+#generalbox2,
+#generalbox3{
+    border: 5px solid #F91C2B;
+    float: left;
+}
+
+#dookubox,
+#dookubox1,
+#dookubox2,
+#dookubox3 {
+    border: 5px solid #9642D8;
+}
+
+.box{
+    height: 105px;
+    width: 100px;
+    text-align: center;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: white;
+}
+
+
+img{
+    display: block;
+    max-width:100px;
+    max-height:50px;
+    width: 100%;
+    height: auto;
+}
+
+#charselect,
+#attackerrow,
+#chooseenemy {
+    height: 110px;
+    width: 450px;
+}
