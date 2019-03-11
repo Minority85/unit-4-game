@@ -11,105 +11,140 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <title>Hello, world!</title>
+    <title>Star Wars RPG</title>
 </head>
 
 <body>
-    <!-- <div  -->
-    <div id="charselect">
-        <div id="yodabox" class="box">
-            <strong>Yoda</strong>
-            <img src="assets/images/yoda.jpg">
-            180
+    <audio id="sound1" src="assets/sound/01 Main Title and the Attack on the Jakku Village.mp3" preload="auto"></audio>
+    <div id="logo">
+        <img src="assets/images/star_wars_logo_PNG20.png" style="float: right; margin-right: 100px; margin-top: 20px;">
+    </div>
+
+    <div id="leftside" style="float: left;">
+        <p class="intro">Select your hero, and then select the character you want to attack.</p>
+        <p class="intro">Once a Defender is in its place press the attack button to start.</p>
+        <p class="intro">Defeat all the characters 1 by 1 until you win or lose!</p>
+        <div id="charselect">
+            <div id="yodabox" class="box">
+                <strong style="color: yellow">Yoda</strong>
+                <img src="assets/images/yoda.jpg">
+                <strong style="color: yellow">60</strong>
+            </div>
+            <div id="skywalkerbox" class="box">
+                <strong style="color: yellow">Anakin</strong>
+                <img id="yodaimg" src="assets/images/17d497fe60c86066f96814d6a6152d90.jpg">
+                <strong style="color: yellow">100</strong>
+            </div>
+            <div id="generalbox" class="box">
+                <strong style="color: yellow">Grievous</strong>
+                <img src="assets/images/general.jpg">
+                <strong style="color: yellow">80</strong>
+            </div>
+            <div id="dookubox" class="box">
+                <strong style="color: yellow">Dooku</strong>
+                <img src="assets/images/jake-murray-jakemurray-countdooku.jpg">
+                <strong style="color: yellow">120</strong>
+            </div>
         </div>
-        <div id="skywalkerbox" class="box">
-            Anakin
-            <img id="yodaimg" src="assets/images/17d497fe60c86066f96814d6a6152d90.jpg">
-            100
+        <br>
+        <p class="texthide" style="display: none">Your Attacker</p>
+        <div id="attackerrow" style="display: none; margin-bottom: 10px; margin">
+            <div id="yodabox1" class="box" style="display: none">
+                <strong style="color: yellow">Yoda</strong>
+                <img src="assets/images/yoda.jpg">
+                <strong style="color: yellow">
+                    <div class="dx">60</div>
+                </strong>
+            </div>
+            <div id="skywalkerbox1" class="box" style="display: none">
+                <strong style="color: yellow">Anakin</strong>
+                <img id="yodaimg" src="assets/images/17d497fe60c86066f96814d6a6152d90.jpg">
+                <strong style="color: yellow">
+                    <div class="dx">100</div>
+                </strong>
+            </div>
+            <div id="generalbox1" class="box" style="display: none">
+                <strong style="color: yellow">Grievous</strong>
+                <img src="assets/images/general.jpg">
+                <strong style="color: yellow">
+                    <div class="dx">80</div>
+                </strong>
+            </div>
+            <div id="dookubox1" class="box" style="display: none">
+                <strong style="color: yellow">Dooku</strong>
+                <img src="assets/images/jake-murray-jakemurray-countdooku.jpg">
+                <strong style="color: yellow">
+                    <div class="dx">120</div>
+                </strong>
+            </div>
         </div>
-        <div id="generalbox" class="box">
-            Grievous
-            <img src="assets/images/general.jpg">
-            80
-        </div>
-        <div id="dookubox" class="box">
-            Dooku
-            <img src="assets/images/jake-murray-jakemurray-countdooku.jpg">
-            120
+        <button id="attackbtn" type="button" class="btn btn-danger" style="display: none">Attack</button>
+        <p>
+            <div id="dialogue"></div>
+        </p>
+        <p>
+            <div id="dialogue1"></div>
+        </p>
+
+        <p class="texthide" style="display: none">Defender</p>
+        <div id="defenderrow">
+            <div id="yodabox3" class="box" style="display: none">
+                <strong style="color: yellow">Yoda</strong>
+                <img src="assets/images/yoda.jpg">
+                <strong style="color: yellow">
+                    <div class="yl">60</div>
+                </strong>
+            </div>
+            <div id="skywalkerbox3" class="box" style="display: none">
+                <strong style="color: yellow">Anakin</strong>
+                <img id="yodaimg" src="assets/images/17d497fe60c86066f96814d6a6152d90.jpg">
+                <strong style="color: yellow">
+                    <div class="sl">100</div>
+                </strong>
+            </div>
+            <div id="generalbox3" class="box" style="display: none">
+                <strong style="color: yellow">Grievous</strong>
+                <img src="assets/images/general.jpg">
+                <strong style="color: yellow">
+                    <div class="gl">80</div>
+                </strong>
+            </div>
+            <div id="dookubox3" class="box" style="display: none">
+                <strong style="color: yellow">Dooku</strong>
+                <img src="assets/images/jake-murray-jakemurray-countdooku.jpg">
+                <strong style="color: yellow">
+                    <div class="dl">120</div>
+                </strong>
+            </div>
         </div>
     </div>
-    <br>
-    <p>Your Attacker</p>
-    <div id="attackerrow">
-        <div id="yodabox1" class="box" style="display: none">
-            Yoda
-            <img src="assets/images/yoda.jpg">
-            <div class="dx">180</div>
-        </div>
-        <div id="skywalkerbox1" class="box" style="display: none">
-            Anakin
-            <img id="yodaimg" src="assets/images/17d497fe60c86066f96814d6a6152d90.jpg">
-            <div class="dx">100</div>
-        </div>
-        <div id="generalbox1" class="box" style="display: none">
-            Grievous
-            <img src="assets/images/general.jpg">
-            <div class="dx">80</div>
-        </div>
-        <div id="dookubox1" class="box" style="display: none">
-            Dooku
-            <img src="assets/images/jake-murray-jakemurray-countdooku.jpg">
-            <div class="dx">120</div>
-        </div>
-    </div>
-    <button id="attackbtn">Attack</button>
-    <p><div id="dialogue"></div></p>
-    <p>Enemies Available to Attack</p>
-    <div id="chooseenemy">
-        <div id="yodabox2" class="box" style="display: none">
-            Yoda
-            <img src="assets/images/yoda.jpg">
-            180
-        </div>
-        <div id="skywalkerbox2" class="box" style="display: none">
-            Anakin
-            <img id="yodaimg" src="assets/images/17d497fe60c86066f96814d6a6152d90.jpg">
-            100
-        </div>
-        <div id="generalbox2" class="box" style="display: none">
-            Grievous
-            <img src="assets/images/general.jpg">
-            80
-        </div>
-        <div id="dookubox2" class="box" style="display: none">
-            Dooku
-            <img src="assets/images/jake-murray-jakemurray-countdooku.jpg">
-            120
+
+    <div id="rightside" style="float: left; margin-top: 25px;">
+        <p class="texthide" style="display: none;">Enemies Available to Attack</p>
+        <div id="chooseenemy" style="display: none">
+            <div id="yodabox2" class="box" style="display: none">
+                <strong style="color: yellow">Yoda</strong>
+                <img src="assets/images/yoda.jpg">
+                <strong style="color: yellow">60</strong>
+            </div>
+            <div id="skywalkerbox2" class="box" style="display: none">
+                <strong style="color: yellow">Anakin</strong>
+                <img id="yodaimg" src="assets/images/17d497fe60c86066f96814d6a6152d90.jpg">
+                <strong style="color: yellow">100</strong>
+            </div>
+            <div id="generalbox2" class="box" style="display: none">
+                <strong style="color: yellow">Grievous</strong>
+                <img src="assets/images/general.jpg">
+                <strong style="color: yellow">80</strong>
+            </div>
+            <div id="dookubox2" class="box" style="display: none">
+                <strong style="color: yellow">Dooku</strong>
+                <img src="assets/images/jake-murray-jakemurray-countdooku.jpg">
+                <strong style="color: yellow">120</strong>
+            </div>
         </div>
     </div>
-    <p>Defender</p>
-    <div id="defenderrow">
-        <div id="yodabox3" class="box" style="display: none">
-            Yoda
-            <img src="assets/images/yoda.jpg">
-            <div class="yl">180</div>
-        </div>
-        <div id="skywalkerbox3" class="box" style="display: none">
-            Anakin
-            <img id="yodaimg" src="assets/images/17d497fe60c86066f96814d6a6152d90.jpg">
-            <div class="sl">100</div>
-        </div>
-        <div id="generalbox3" class="box" style="display: none">
-            Grievous
-            <img src="assets/images/general.jpg">
-            <div class="gl">80</div>
-        </div>
-        <div id="dookubox3" class="box" style="display: none">
-            Dooku
-            <img src="assets/images/jake-murray-jakemurray-countdooku.jpg">
-            <div class="dl">120</div>
-        </div>
-    </div>
+
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

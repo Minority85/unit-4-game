@@ -36,7 +36,7 @@ var endgame = 3;
 
 $("#yodabox").on("click", function () {
 
-
+    document.getElementById('sound1').play();
 
     $("#yodabox").hide();
     $("#skywalkerbox").hide();
@@ -48,6 +48,13 @@ $("#yodabox").on("click", function () {
     $("#generalbox2").show();
     $("#dookubox2").show();
 
+    $("#charselect").hide();
+    $("#attackerrow").show();
+    $("#chooseenemy").show();
+    $(".texthide").show();
+    $(".intro").hide();
+    $("#attackbtn").show();
+
     heroA = char.yoda.attack;
     heroH = char.yoda.life;
     heroholder = char.yoda.attack;
@@ -57,7 +64,7 @@ $("#yodabox").on("click", function () {
 
 $("#skywalkerbox").on("click", function () {
 
-
+    document.getElementById('sound1').play();
 
     $("#yodabox").hide();
     $("#skywalkerbox").hide();
@@ -69,6 +76,13 @@ $("#skywalkerbox").on("click", function () {
     $("#generalbox2").show();
     $("#dookubox2").show();
 
+    $("#charselect").hide();
+    $("#attackerrow").show();
+    $("#chooseenemy").show();
+    $(".texthide").show();
+    $(".intro").hide();
+    $("#attackbtn").show();
+
     heroA = char.skywalker.attack;
     heroH = char.skywalker.life;
     heroholder = char.skywalker.attack;
@@ -79,7 +93,7 @@ $("#skywalkerbox").on("click", function () {
 
 $("#generalbox").on("click", function () {
 
-
+    document.getElementById('sound1').play();
 
     $("#yodabox").hide();
     $("#skywalkerbox").hide();
@@ -91,6 +105,13 @@ $("#generalbox").on("click", function () {
     $("#generalbox1").show();
     $("#dookubox2").show();
 
+    $("#charselect").hide();
+    $("#attackerrow").show();
+    $("#chooseenemy").show();
+    $(".texthide").show();
+    $(".intro").hide();
+    $("#attackbtn").show();
+
     heroA = char.general.attack;
     heroH = char.general.life;
     heroholder = char.general.attack;
@@ -101,7 +122,7 @@ $("#generalbox").on("click", function () {
 
 $("#dookubox").on("click", function () {
 
-
+    document.getElementById('sound1').play();
 
     $("#yodabox").hide();
     $("#skywalkerbox").hide();
@@ -112,6 +133,13 @@ $("#dookubox").on("click", function () {
     $("#skywalkerbox2").show();
     $("#generalbox2").show();
     $("#dookubox1").show();
+
+    $("#charselect").hide();
+    $("#attackerrow").show();
+    $("#chooseenemy").show();
+    $(".texthide").show();
+    $(".intro").hide();
+    $("#attackbtn").show();
 
     heroA = char.dooku.attack;
     heroH = char.dooku.life;
@@ -292,6 +320,8 @@ $("#attackbtn").on("click", function () {
         else {
             heroH -= defenderA;
             $(".dx").html(heroH);
+            $("#dialogue1").css({ 'text-shadow': '-1px -1px 0 yellow, 1px -1px 0 yellow, -1px 1px 0 yellow, 1px 1px 0 yellow', 'font-size': '20px', 'font-weight': 'bold' });
+            $("#dialogue1").html("The Defender did " + defenderA + " damage to you!");
             if (heroH < 1) {
                 alert("you lose")
                 location.reload();

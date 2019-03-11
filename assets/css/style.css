@@ -14,7 +14,7 @@ p {
 	1px -1px 0 yellow,
 	-1px 1px 0 yellow,
     1px 1px 0 yellow;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
 }
 
@@ -24,6 +24,9 @@ p {
 #yodabox3{
     border: 5px solid #66F16F;
     float: left;
+    border-radius: 25px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 #skywalkerbox,
@@ -32,6 +35,9 @@ p {
 #skywalkerbox3{
     border: 5px solid #04DDF6;
     float: left;
+    border-radius: 25px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 #generalbox,
@@ -40,6 +46,9 @@ p {
 #generalbox3{
     border: 5px solid #F91C2B;
     float: left;
+    border-radius: 25px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 #dookubox,
@@ -47,30 +56,40 @@ p {
 #dookubox2,
 #dookubox3 {
     border: 5px solid #9642D8;
+    border-radius: 25px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 .box{
-    height: 105px;
-    width: 100px;
+    height: 145px;
+    width: 140px;
     text-align: center;
     overflow: hidden;
     padding-left: 10px;
     padding-right: 10px;
     background: white;
+    background-image: url(../images/star.jpg);
 }
 
 
 img{
     display: block;
-    max-width:100px;
-    max-height:50px;
+    max-width:140px;
+    max-height:85px;
     width: 100%;
     height: auto;
+    border-radius: 15px;
 }
 
 #charselect,
 #attackerrow,
 #chooseenemy {
-    height: 110px;
-    width: 450px;
+    height: 150px;
+    width: 620px;
+}
+
+#leftside {
+    margin-left: 10px;
+    margin-top: 10px;
 }
